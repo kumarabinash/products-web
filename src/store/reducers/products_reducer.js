@@ -4,7 +4,7 @@ import {produce} from "immer";
 import {findIndex} from "lodash";
 
 const initialState = {
-  products: [{id: 1, name: "Product 1 Name"}],
+  products: [],
   cart: {
     show: false,
     count: 0,
