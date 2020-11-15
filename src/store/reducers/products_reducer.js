@@ -1,5 +1,7 @@
-import {FETCH_PRODUCTS, ADD_TO_CART, HIDE_CART, SHOW_CART} from "../actions/product_actions";
+import {FETCH_PRODUCTS, ADD_TO_CART, HIDE_CART, SHOW_CART, REMOVE_FROM_CART} from "../actions/product_actions";
 import {produce} from "immer";
+
+import {findIndex} from "lodash";
 
 const initialState = {
   products: [{id: 1, name: "Product 1 Name"}],
@@ -55,17 +57,18 @@ export default function productsReducer(state = initialState, action) {
 
         if(typeof cart_item !== 'undefined'){
           if(cart_item.quantity === 1){
+            // Find cart item index
+            let cart_item_index = findIndex(draft.cart.items, (item) => {return item.id == action.payload});
+
             // Remove item from cart
-            let cart_item_index;
-
-
-
+            draft.cart.items.splice(cart_item_index, 1);
+            product.cart_count = 0;
           } else {
             // Reduce quantity from item
-
+            cart_item.quantity--;
           }
-        } else {
-
+          // Increase product stock
+          product.stock++;
         }
       });
     case HIDE_CART:
