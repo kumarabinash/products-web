@@ -1,11 +1,24 @@
+/**
+ * Fixed Navbar Top
+ * @author Kumar Abinash
+ * @param {object} props:
+ *  {array} data: list of products added to cart
+ *  {fn} showCart: shows cart
+ */
+
+
+// Bootstrap
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container';
-import {FaCartArrowDown} from 'react-icons/fa';
-import {FcLike} from "react-icons/fc";
 
-import Cart from "./Cart"
+// Assets (Icons, Images)
+import {FaCartArrowDown} from 'react-icons/fa';
+
+// Actions
 import {SHOW_CART} from "../store/actions/product_actions";
+
+// Utilities (Redux)
 import {connect} from "react-redux";
 
 function FixedNavbar({data, showCart}){
@@ -13,7 +26,6 @@ function FixedNavbar({data, showCart}){
     <Container fluid>
       <Navbar bg="light" expand="lg" fixed="top">
         <Navbar.Brand href="https://drive.google.com/file/d/18QTUqaAA0Tnl8f8NN8vpKi1SvY4oGQ5u/view?usp=sharing" target="_blank" rel="noreferrer">
-          {/*<FcLike style={{fontSize: "28px"}}/>*/}
           <span className="heart"></span>
         </Navbar.Brand>
         <Nav className="mr-auto justify-content-end" style={{marginLeft: '25px'}}>

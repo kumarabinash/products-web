@@ -1,6 +1,11 @@
+/**
+ * Footer
+ * @author Kumar Abinash
+ */
+
 import React from "react";
 
-export default function Footer({data, fetchProducts, addToCart}){
+export default function Footer(){
 
   return(
     <div className="footer">

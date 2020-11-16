@@ -1,7 +1,21 @@
+/**
+ * Product : Displays single product in a card
+ * @author Kumar Abinash
+ * @param {object} props:
+ *  {object} data: product details
+ *  {fn} addToCart: addToCart
+ */
+
 import React, {useEffect} from "react";
+
+// Bootstrap
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+
+// Icons
 import {FaCartPlus} from "react-icons/fa";
+
+// Actions
 import {ADD_TO_CART} from "../../store/actions/product_actions";
 
 

@@ -1,3 +1,9 @@
+/**
+ * Products Reducer
+ * @author Kumar Abinash
+ *
+ */
+
 import {FETCH_PRODUCTS, ADD_TO_CART, HIDE_CART, SHOW_CART, REMOVE_FROM_CART} from "../actions/product_actions";
 import {produce} from "immer";
 

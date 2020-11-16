@@ -1,9 +1,26 @@
-import Product from "./Product";
+/**
+ * Products Index, renders a list of products
+ * @author Kumar Abinash
+ * @param {object} props:
+ *  {array} data: list of products
+ *  {fn} fetchProducts: redux dispatch action for adding fetched data from remote
+ *  {fn} addToCart: addToCart
+ */
+
 import React, {useEffect, useState} from "react";
-import {connect} from "react-redux";
-import {FETCH_PRODUCTS} from "../../store/actions/product_actions";
-import Axios from "axios";
+
+// Boostrap
 import Row from "react-bootstrap/Row"
+
+// Components
+import Product from "./Product";
+
+// Utilities (Redux, Axios)
+import {connect} from "react-redux";
+import Axios from "axios";
+
+// Actions
+import {FETCH_PRODUCTS} from "../../store/actions/product_actions";
 
 function Products({data, fetchProducts, addToCart}){
 
@@ -18,7 +35,6 @@ function Products({data, fetchProducts, addToCart}){
         payload: response
       })
     });
-
   }, []);
 
   return(
