@@ -65,7 +65,7 @@ function Cart({data, closeCart, removeFromCart, addToCart}){
 
               </>
               :
-              <div>
+              <div className="cart-empty">
                 <img src={EmptyCartImage} alt="" height="100%" width="100%"/>
                 <h4 style={{textAlign: 'center', marginTop: "20px"}}>Your cart is empty!</h4>
               </div>

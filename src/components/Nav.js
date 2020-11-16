@@ -12,10 +12,11 @@ function FixedNavbar({data, showCart}){
   return(
     <Container fluid>
       <Navbar bg="light" expand="lg" fixed="top">
-        <Navbar.Brand href="#">
-          <FcLike style={{fontSize: "28px"}}/>
+        <Navbar.Brand href="https://drive.google.com/file/d/18QTUqaAA0Tnl8f8NN8vpKi1SvY4oGQ5u/view?usp=sharing" target="_blank" rel="noreferrer">
+          {/*<FcLike style={{fontSize: "28px"}}/>*/}
+          <span className="heart"></span>
         </Navbar.Brand>
-        <Nav className="mr-auto justify-content-end">
+        <Nav className="mr-auto justify-content-end" style={{marginLeft: '25px'}}>
           <Nav.Link href="#">Products</Nav.Link>
         </Nav>
         <Nav className="mr-right">

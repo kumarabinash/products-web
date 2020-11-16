@@ -9,6 +9,33 @@
 .navbar{
   box-shadow: 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
 
+  .heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 40px;
+    transform: translate(-50%, -50%);
+    background: url(./assets/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+  }
+  .heart:hover {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+  }
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }
+
+
+
+
   .cart-count{
     position: absolute;
     background: #52d81d;
@@ -21,10 +48,20 @@
     font-weight: bold;
     color: white;
   }
+
+
+}
+
+.cart-empty{
+  padding: 30px 60px;
+}
+
+.products-index{
+  margin-top: 70px;
+  margin-bottom: 40px;
 }
 
 .product-container{
-  margin-top: 60px;
   //padding: 40px;
 
   .product{
@@ -138,7 +175,6 @@
     >div{
       text-align: left;
       display: table-cell;
-      background: red;
       border: 1px solid;
     }
 
@@ -146,4 +182,19 @@
       text-align: right;
     }
   }
+}
+
+
+.footer{
+  height: 30px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 28px -12px rgba(0, 0, 0, 0.5);
 }

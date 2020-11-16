@@ -28,6 +28,7 @@ export default function Product({ data, addToCart }){
           </div>
           <div className="product-action">
             <Button variant={data.cart_count ? "info" : "outline-info"}
+                    disabled={data.stock <= 0 ? true : null}
                     onClick={() => addToCart({
                       type: ADD_TO_CART,
                       payload: data.id
