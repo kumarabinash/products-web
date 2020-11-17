@@ -75,6 +75,9 @@ export default function productsReducer(state = initialState, action) {
           }
           // Increase product stock
           product.stock++;
+
+          // decrease product cart_count
+          product.cart_count--;
         }
       });
     case HIDE_CART:
