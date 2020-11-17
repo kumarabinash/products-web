@@ -72,12 +72,14 @@ export default function productsReducer(state = initialState, action) {
           } else {
             // Reduce quantity from item
             cart_item.quantity--;
+
+            // decrease product cart_count
+            product.cart_count--;
           }
           // Increase product stock
           product.stock++;
 
-          // decrease product cart_count
-          product.cart_count--;
+
         }
       });
     case HIDE_CART:
